@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8d2341">
+<title>Nandagopan & Nivedha | Wedding Invitation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+:root{--wine:#7d1737;--rose:#a83255;--cream:#fff9f3;--gold:#b88a42;--ink:#35252b}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,sans-serif}
+section{padding:72px 20px;max-width:900px;margin:auto}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 25%,#fff 0,#fff9f3 48%,#f7e7df 100%)}
+.hero:before,.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #d7ad91;border-radius:50%;opacity:.45}
+.hero:before{top:-120px;left:-100px}.hero:after{bottom:-130px;right:-100px}
+.motif{font-size:28px;color:var(--gold);letter-spacing:10px;margin-bottom:24px}
+.kicker{text-transform:uppercase;letter-spacing:4px;font-size:12px;color:var(--rose);font-weight:600}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:600}
+h1{font-size:clamp(58px,15vw,108px);line-height:.82;margin:18px 0;color:var(--wine)}
+.amp{font-size:.62em;color:var(--gold);font-weight:400}
+.date{font-family:"Cormorant Garamond",serif;font-size:28px;margin:28px 0 8px}
+.place{font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+.divider{width:80px;height:1px;background:var(--gold);margin:28px auto}
+.scroll{display:inline-block;margin-top:42px;color:var(--wine);text-decoration:none;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.intro{text-align:center}.intro h2{font-size:42px;color:var(--wine);margin:0 0 15px}.intro p{line-height:1.8;max-width:620px;margin:auto}
+.events{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:#fff;border:1px solid #ecd9cc;border-radius:22px;padding:32px 24px;text-align:center;box-shadow:0 12px 35px #6d233011}
+.number{font-family:"Cormorant Garamond";font-size:24px;color:var(--gold)}
+.card h3{font-family:"Cormorant Garamond";font-size:31px;color:var(--wine);margin:8px 0}
+.card .time{font-weight:600;margin:12px 0}.card p{font-size:14px;line-height:1.7;color:#6a555c}
+.btn{display:inline-block;margin-top:15px;padding:11px 18px;border-radius:999px;background:var(--wine);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.7px}
+.family{text-align:center;background:#fff}
+.family h2,.rsvp h2{font-size:42px;color:var(--wine);margin:0 0 20px}
+.family p{line-height:1.8}.names{font-family:"Cormorant Garamond";font-size:26px;color:var(--wine);margin:22px 0}
+.rsvp{text-align:center}.phones{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}.phones a{padding:12px 16px;border:1px solid #d8b8a9;border-radius:999px;color:var(--wine);text-decoration:none;font-size:13px}
+.footer{text-align:center;padding:45px 20px;background:var(--wine);color:#fff}.footer .motif{color:#e4bd75;font-size:20px}.footer p{font-family:"Cormorant Garamond";font-size:24px}
+.music{position:fixed;right:18px;bottom:18px;z-index:5;width:50px;height:50px;border:0;border-radius:50%;background:var(--wine);color:#fff;box-shadow:0 8px 25px #0003;cursor:pointer;font-size:19px}
+@media(max-width:650px){section{padding:58px 17px}.events{grid-template-columns:1fr}.hero{min-height:94vh}.intro h2,.family h2,.rsvp h2{font-size:36px}}
+
+.cover{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;
+background:radial-gradient(circle at 50% 20%,#fff 0,#fff9f3 50%,#f0d9d0 100%);
+transition:opacity .7s ease,transform .7s ease}
+.envelope{width:min(88vw,520px);min-height:620px;background:#fffaf5;border:1px solid #d9b79e;
+box-shadow:0 25px 70px #5d1d2b22;padding:70px 35px;text-align:center;position:relative}
+.envelope:before{content:"";position:absolute;inset:18px;border:1px solid #e5cbb9;pointer-events:none}
+.seal{margin:0 auto 35px;width:68px;height:68px;border-radius:50%;display:flex;align-items:center;
+justify-content:center;border:1px solid var(--gold);color:var(--gold);font-family:"Cormorant Garamond";font-size:20px}
+.cover-kicker{text-transform:uppercase;letter-spacing:3px;font-size:11px;color:var(--rose)}
+.envelope h1{font-family:"Cormorant Garamond";font-size:clamp(52px,13vw,82px);line-height:.8;color:var(--wine);margin:35px 0}
+.envelope h1 span{font-size:.5em;color:var(--gold);font-weight:400}
+.cover-date{font-family:"Cormorant Garamond";font-size:25px;color:var(--ink);margin:30px}
+.open-btn,.rsvp-btn,.submit-btn{border:0;cursor:pointer;font-family:Inter,sans-serif}
+.open-btn{padding:14px 28px;border-radius:999px;background:var(--wine);color:#fff;letter-spacing:1px}
+.cover.opened{opacity:0;transform:scale(1.06)}
+.hidden{display:none!important}
+.countdown-section{text-align:center;background:#7d1737;color:#fff;max-width:none}
+.countdown-section .kicker{color:#e6c27e}.countdown-section h2{font-size:42px;margin:8px 0 30px}
+.countdown{display:flex;justify-content:center;gap:clamp(10px,5vw,45px);flex-wrap:wrap}
+.countdown div{min-width:72px}.countdown strong{display:block;font-family:"Cormorant Garamond";font-size:44px;font-weight:500}
+.countdown span{font-size:10px;text-transform:uppercase;letter-spacing:2px;opacity:.8}
+.rsvp-btn{margin-top:22px;padding:15px 25px;border-radius:999px;background:var(--wine);color:#fff;font-size:13px}
+.rsvp-form{max-width:440px;margin:25px auto 0;display:grid;gap:12px}
+.rsvp-form input,.rsvp-form select,.rsvp-form textarea{width:100%;padding:14px 15px;border:1px solid #dfc8bb;border-radius:12px;background:#fff;font:inherit;color:var(--ink)}
+.submit-btn{padding:13px;border-radius:12px;background:var(--gold);color:#fff}
+.form-note{font-size:11px!important;color:#806b70!important}
+.contact{text-align:center}.contact h2{font-size:42px;color:var(--wine);margin:0 0 20px}
+
+</style>
+</head>
+<body>
+<div class="cover" id="cover">
+  <div class="envelope">
+    <div class="seal">N &amp; N</div>
+    <div class="cover-kicker">Together with our families</div>
+    <h1>Nandagopan<br><span>&amp;</span><br>Nivedha</h1>
+    <div class="cover-date">15 · 11 · 2026</div>
+    <button class="open-btn" id="openBtn">Tap to Open</button>
+  </div>
+</div>
+
+<button class="music" id="musicBtn" aria-label="Toggle music">♪</button>
+
+<main id="mainContent" class="hidden">
+<header class="hero">
+  <div>
+    <div class="motif">✦ ❈ ✦</div>
+    <div class="kicker">A new chapter begins</div>
+    <h1>Nandagopan <span class="amp">&amp;</span><br>Nivedha</h1>
+    <div class="divider"></div>
+    <div class="date">15 November 2026</div>
+    <div class="place">Palakkad · Kerala</div>
+  </div>
+</header>
+
+<section class="countdown-section">
+  <div class="kicker">Counting every moment</div>
+  <h2>Until we say “I do”</h2>
+  <div class="countdown" id="countdown">
+    <div><strong id="days">0</strong><span>Days</span></div>
+    <div><strong id="hours">0</strong><span>Hours</span></div>
+    <div><strong id="minutes">0</strong><span>Minutes</span></div>
+    <div><strong id="seconds">0</strong><span>Seconds</span></div>
+  </div>
+</section>
+
+<section class="intro" id="invitation">
+  <div class="kicker">Our invitation</div>
+  <h2>We invite you to celebrate our wedding</h2>
+  <p>Two hearts, one beautiful beginning. We would be delighted to have you with us as we celebrate this special day and begin our journey together.</p>
+</section>
+
+<section>
+  <div class="events">
+    <article class="card">
+      <div class="number">01</div>
+      <h3>Thaalikettu</h3>
+      <div class="time">9:30 AM – 10:30 AM</div>
+      <p>Sree Manappullikkavu Bhagavathy Temple<br>Palakkad</p>
+      <a class="btn" target="_blank" href="https://maps.app.goo.gl/q5wu8k9w2L42fiUc6">Open in Google Maps</a>
+    </article>
+    <article class="card">
+      <div class="number">02</div>
+      <h3>Wedding Function</h3>
+      <div class="time">11:30 AM onwards</div>
+      <p>Udaya Resort<br>Yakkara</p>
+      <a class="btn" target="_blank" href="https://maps.app.goo.gl/g9TueLnvREVuJVcC6?g_st=ac.">Open in Google Maps</a>
+    </article>
+  </div>
+</section>
+
+<section class="rsvp">
+  <div class="kicker">We'd love to have you there</div>
+  <h2>Mark Your Attendance</h2>
+  <p>Please let us know if you will be joining us.</p>
+  <button class="rsvp-btn" id="rsvpBtn">💌 Mark Your Attendance</button>
+
+  <div class="rsvp-form hidden" id="rsvpForm">
+    <input id="guestName" type="text" placeholder="Your name">
+    <select id="attendance">
+      <option value="">Will you attend?</option>
+      <option>Yes, I'll be there</option>
+      <option>Sorry, I can't attend</option>
+    </select>
+    <input id="guestCount" type="number" min="1" max="20" placeholder="Number of guests">
+    <textarea id="message" rows="3" placeholder="A message for the couple (optional)"></textarea>
+    <button class="submit-btn" id="submitRsvp">Submit RSVP</button>
+    <p class="form-note">This form is ready for your preferred RSVP service to be connected.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="kicker">Need any details?</div>
+  <h2>Get in touch</h2>
+  <div class="phones">
+    <a href="tel:+918129478135">+91 81294 78135</a>
+    <a href="tel:+919810208648">+91 98102 08648</a>
+    <a href="tel:+919447485956">+91 94474 89562</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="motif">✦ ❈ ✦</div>
+  <p>With love, Nandagopan &amp; Nivedha</p>
+  <small>15 · 11 · 2026</small>
+</footer>
+</main>
+
+<script>
+const cover = document.getElementById('cover');
+const main = document.getElementById('mainContent');
+
+document.getElementById('openBtn').onclick = () => {
+  cover.classList.add('opened');
+  setTimeout(() => {
+    cover.style.display = 'none';
+    main.classList.remove('hidden');
+    window.scrollTo(0, 0);
+  }, 750);
+};
+
+const weddingDate = new Date('2026-11-15T09:30:00+05:30').getTime();
+function updateCountdown() {
+  const now = Date.now();
+  const diff = Math.max(0, weddingDate - now);
+  document.getElementById('days').textContent = Math.floor(diff / 86400000);
+  document.getElementById('hours').textContent = Math.floor(diff / 3600000) % 24;
+  document.getElementById('minutes').textContent = Math.floor(diff / 60000) % 60;
+  document.getElementById('seconds').textContent = Math.floor(diff / 1000) % 60;
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+document.getElementById('rsvpBtn').onclick = () => {
+  document.getElementById('rsvpForm').classList.toggle('hidden');
+};
+
+document.getElementById('submitRsvp').onclick = () => {
+  const name = document.getElementById('guestName').value.trim();
+  const attendance = document.getElementById('attendance').value;
+  if (!name || !attendance) {
+    alert('Please enter your name and attendance status.');
+    return;
+  }
+  alert('Thank you, ' + name + '! Your RSVP details are ready to be connected to your attendance list.');
+};
+
+let audioCtx, timer, playing = false;
+const musicBtn = document.getElementById('musicBtn');
+function tone(freq, start, dur) {
+  const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+  o.type = 'sine'; o.frequency.value = freq;
+  g.gain.setValueAtTime(0.0001, start);
+  g.gain.exponentialRampToValueAtTime(0.035, start + 0.04);
+  g.gain.exponentialRampToValueAtTime(0.0001, start + dur);
+  o.connect(g).connect(audioCtx.destination);
+  o.start(start); o.stop(start + dur + 0.03);
+}
+function loop() {
+  const t = audioCtx.currentTime;
+  [261.63,329.63,392,329.63,293.66,349.23,440,349.23]
+    .forEach((f,i) => tone(f,t+i*.42,.75));
+  timer = setTimeout(loop,3400);
+}
+musicBtn.onclick = () => {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  if (!playing) {
+    audioCtx.resume(); playing = true; musicBtn.textContent = '❚❚'; loop();
+  } else {
+    clearTimeout(timer); playing = false; musicBtn.textContent = '♪';
+  }
+};
+</script>
+</body>
+</html>
